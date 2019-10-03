@@ -1,0 +1,499 @@
+Unit Testing for Java CA4
+
+    - Run Server
+    - Menu Display appears when you run client
+      	
+        Type: 21 (21 is not a command)
+            Expected - enter in 21, press enter, told 'sorry input incorrect'
+                Please enter Command:
+                21
+                Sorry input incorrect
+
+            Actual - enter in 21, press enter, told 'sorry input incorrect'
+                Please enter Command:
+                21
+                Sorry input incorrect
+
+        Type: -32 (-32 is not a command)
+            Expected - enter in -32, press enter, told 'sorry input incorrect'
+                Please enter Command:
+                -32
+                Sorry input incorrect
+            Actual - enter in 21, press enter, told 'sorry input incorrect'
+                Please enter Command:
+                -32
+                Sorry input incorrect
+        
+        Type: dfg (dfg is not a command)
+            Expected - enter in dfg, press enter, told 'sorry input incorrect'
+                Please enter Command:
+                dfg
+                Sorry input incorrect
+        
+            Actual - enter in dfg, press enter, told 'sorry input incorrect'
+                Please enter Command:
+                dfg
+                Sorry input incorrect
+        
+        Type: 123fgh (1f is not a command)
+                Expected - enter in 123fgh, press enter, told 'sorry input incorrect'
+                Please enter Command:
+                123fgh
+                Sorry input incorrect
+        
+            Actual - enter in 123fgh, press enter, told 'sorry input incorrect'
+                Please enter Command:
+                123fgh
+                Sorry input incorrect
+                
+        Type: 1 (Display all Movies)
+            Expected - press any key, all movies printed in this format:
+                Movie id: 1052
+                Movie Title: Doing Time
+                Movie Director(s): Dick Clement
+                Movie Genre(s): Comedy, Crime
+            
+                Movie id: 1051
+                Movie Title: Deliverance
+                Movie Director(s): John Boorman
+                Movie Genre(s): Adventure, Drama, Thriller
+                
+                etc.
+            
+            Actual - press any key, all movies are printed: 
+                Movie id: 1050
+                Movie Title: Where the Wild Things Are
+                Movie Director(s): Spike Jonze
+                Movie Genre(s): Adventure, Drama, Family
+
+                Movie id: 1051
+                Movie Title: Deliverance
+                Movie Director(s): John Boorman
+                Movie Genre(s): Adventure, Drama, Thriller
+                
+                etc.
+        
+        Type: 2 (Find movie by ID)
+            Right Input
+            Expected - asked for movie ID, press enter, shown movie
+                Please enter the ID:
+                123 
+
+                Movie id: 123
+                Movie Title: Batman Begins
+                Movie Director(s): Christopher Nolan
+                Movie Genre(s): Action, Adventure
+            
+            Actual - asked for movie Id, pressed enter, shown movie
+                Please enter the ID:
+                123
+
+                Movie id: 123
+                Movie Title: Batman Begins
+                Movie Director(s): Christopher Nolan
+                Movie Genre(s): Action, Adventure
+            
+                (Wrong Input)
+                Expected - asked for movie ID, press enter, 'movie not found'
+                    Please enter the ID:
+                    10000
+                    Movie ID not found
+                    
+                Actual - asked for movie Id, pressed enter, 'movie not found'
+                    Please enter the ID:
+                    10000
+                    Movie ID not found
+            
+                (Wrong Input)
+                Expected - asked for movie ID, press enter, 'movie not found'
+                    Please enter the ID:
+                    -123
+                    Movie ID not found
+                    
+                Actual - asked for movie Id, pressed enter, 'movie not found'
+                    Please enter the ID:
+                    -123
+                    Movie ID not found
+        
+        Type: 3 (Find Movie by Genre)
+            Expected - asked for genre, press enter, shown movies with genre in it
+                Please enter the genre:
+                Sci-Fi
+
+                Movie id: 14
+                Movie Title: iron man
+                Movie Director(s): Jon Favreau
+                Movie Genre(s): Marvel, Action, Adventure, Sci-Fi
+            
+                Movie id: 15
+                Movie Title: iron man 2
+                Movie Director(s): Jon Favreau
+                Movie Genre(s): Disney, marvel,Action, Adventure, Sci-Fi
+                        
+                etc.
+        
+            Actual - asked for genre, pressed enter, shown movies with that genre in it
+                Please enter the genre:
+                Sci-Fi
+
+                Movie id: 14
+                Movie Title: iron man
+                Movie Director(s): Jon Favreau
+                Movie Genre(s): Marvel, Action, Adventure, Sci-Fi
+            
+                Movie id: 15
+                Movie Title: iron man 2
+                Movie Director(s): Jon Favreau
+                Movie Genre(s): Disney, marvel,Action, Adventure, Sci-Fi
+                        
+                etc.
+                
+            (Wrong Input)
+            Expected - asked for genre, press enter, told no movies with genre
+                Please enter the genre:
+                32
+                Movies with that genre not found
+        
+            Actual - asked for genre, pressed enter, told no movies with genre
+                Please enter the genre:
+                32
+                Movies with that genre not found
+                
+            (Wrong Input)
+            Expected - asked for genre, press enter, told no movies with genre
+                Please enter the genre:
+                qwert
+                Movies with that genre not found
+        
+            Actual - asked for genre, pressed enter, told no movies with genre
+                Please enter the genre:
+                qwert
+                Movies with that genre not found
+        
+        Type: 4 (Find by Title like)
+            Expected - asked for title, press enter, finds movies like that title
+                Please enter the title:
+                spider-man
+
+                Movie id: 25
+                Movie Title: spider-man
+                Movie Director(s): Sam Raimi
+                Movie Genre(s): Action, Adventure
+
+                Movie id: 26
+                Movie Title: spider-man 2
+                Movie Director(s): Sam Raimi
+                Movie Genre(s): Action, Adventure
+
+                Movie id: 45
+                Movie Title: Spider-Man 3
+                Movie Director(s): Sam Raimi
+                Movie Genre(s): Action, Adventure
+
+            Actual - asked for title, pressed enter, shown movies like that title
+                Please enter the title:
+                spider-man
+
+                Movie id: 25
+                Movie Title: spider-man
+                Movie Director(s): Sam Raimi
+                Movie Genre(s): Action, Adventure
+
+                Movie id: 26
+                Movie Title: spider-man 2
+                Movie Director(s): Sam Raimi
+                Movie Genre(s): Action, Adventure
+
+                Movie id: 45
+                Movie Title: Spider-Man 3
+                Movie Director(s): Sam Raimi
+                Movie Genre(s): Action, Adventure
+
+            (wrong input)
+            Expected - asked for title, press enter, movie with that title not found
+                Please enter the title:
+                were
+                Movie with that title not found
+            Actual - asked for title, press enter, movie with that title not found
+                Please enter the title:
+                were
+                Movie with that title not found
+            
+            (wrong input)
+            Expected - asked for title, press enter, movie with that title not found
+                Please enter the title:
+                32
+                Movie with that title not found
+            Actual - asked for title, press enter, movie with that title not found
+                Please enter the title:
+                32
+                Movie with that title not found
+                
+        Type: 5 (Find by Director)
+            Expected - asked for director, press enter, given movies by that director
+                Please enter the director:
+                Sam Raimi
+
+                Movie id: 25
+                Movie Title: spider-man
+                Movie Director(s): Sam Raimi
+                Movie Genre(s): Action, Adventure
+
+                Movie id: 26
+                Movie Title: spider-man 2
+                Movie Director(s): Sam Raimi
+                Movie Genre(s): Action, Adventure
+
+                Movie id: 45
+                Movie Title: Spider-Man 3
+                Movie Director(s): Sam Raimi
+                Movie Genre(s): Action, Adventure
+
+                Movie id: 545
+                Movie Title: The Quick and the Dead
+                Movie Director(s): Sam Raimi
+                Movie Genre(s): Action, Thriller, Western
+            
+            Actual - asked for director, pressed enter, shown movies by director
+                Sam Raimi
+
+                Movie id: 25
+                Movie Title: spider-man
+                Movie Director(s): Sam Raimi
+                Movie Genre(s): Action, Adventure
+
+                Movie id: 26
+                Movie Title: spider-man 2
+                Movie Director(s): Sam Raimi
+                Movie Genre(s): Action, Adventure
+
+                Movie id: 45
+                Movie Title: Spider-Man 3
+                Movie Director(s): Sam Raimi
+                Movie Genre(s): Action, Adventure
+
+                Movie id: 545
+                Movie Title: The Quick and the Dead
+                Movie Director(s): Sam Raimi
+                Movie Genre(s): Action, Thriller, Western
+            
+            (wrong input)
+            Expected - asked for director, press enter, movie(s) with that director not found
+                Please enter the director:
+                Johnny
+                Movie(s) with that director not found
+            
+            Actual - asked for director, press enter, movie(s) with that director not found
+                
+                Please enter the director:
+                Johnny
+                Movie(s) with that director not found
+            
+            (wrong input)
+            Expected - asked for director, press enter, movie(s) with that director not found
+                Please enter the director:
+                -12
+                Movie(s) with that director not found
+            
+            Actual - asked for director, press enter, movie(s) with that director not found
+                
+                Please enter the director:
+                -12
+                Movie(s) with that director not found
+            
+        Type: 6 (Add new Movie to the movies table)
+            Expected - asked for the title, director and genre, press enter, success message
+
+                Please enter the title:
+                Avengers Age of Ultron
+
+                Please enter the director:
+                Joss Whedon
+
+                Please enter the genre:
+                Action, Adventure, Sci-Fi
+
+                {"success":"Success","message":"Successfully Inserted Avengers Age of Ultron"}
+        
+            Actual - asked for the title, director and genre, pressed enter, given success message
+                Please enter the title:
+                Avengers Age of Ultron
+
+                Please enter the director:
+                Joss Whedon
+
+                Please enter the genre:
+                Action, Adventure, Sci-Fi
+
+                {"success":"Success","message":"Successfully Inserted Avengers Age of Ultron"}
+        
+            Expected - asked for the title, director and genre, press enter, success message
+                Please enter the title:
+                Avengers Infinity War
+
+                Please enter the director:
+                Anthony Russo, Joe Russo
+
+                Please enter the genre:
+                Action, Adventure, Sci-Fi
+                {"success":"Success","message":"Successfully Inserted Avengers Infinity War"}
+                
+            Actual - asked for the title, director and genre, pressed enter, given success message
+                Please enter the title:
+                Avengers Infinity War
+
+                Please enter the director:
+                Anthony Russo, Joe Russo
+
+                Please enter the genre:
+                Action, Adventure, Sci-Fi
+                {"success":"Success","message":"Successfully Inserted Avengers Infinity War"}
+                
+        Type: 7 (Add watched movie to movieswatched table)
+            Expected - asked for user ID, asked for movie ID of watched movie, success message
+                Please enter user ID:
+                2
+
+                Please enter movie ID:
+                32
+                {"success":"Success","message":"Successfully Inserted 32 for User: 2"}
+            Actual - asked for user ID, asked for movie ID of watched movie, success message
+                Please enter user ID:
+                2
+
+                Please enter movie ID:
+                32
+                {"success":"Success","message":"Successfully Inserted 32 for User: 2"}
+            
+        Type: 8 (recommend random movie from the movie list)
+            Expected - asked to press any key, movie shown
+                Press any key to continue
+
+                {"success":1,"movieList":[{"id":290,"title":"Mona Lisa Smile","genre":["Drama"],"director":["Mike Newell"],"runtime":"117 min","rating":"PG-13","format":"DVD","year":"2003","copies":1,"barcode":"5392000325524","user_rating":"6.4"}]}
+
+            Actual - asked to press any key, random movie is shown
+                Press any key to continue
+
+                {"success":1,"movieList":[{"id":290,"title":"Mona Lisa Smile","genre":["Drama"],"director":["Mike Newell"],"runtime":"117 min","rating":"PG-13","format":"DVD","year":"2003","copies":1,"barcode":"5392000325524","user_rating":"6.4"}]}
+
+        Type: 9 (recommend movie by genre of watched movie by the Movie ID)
+            Expected - asked to enter movie ID, shown recommended movies
+                Please enter a movie ID, a movie like that genre will be shown:
+                43
+
+                {"success":1,"movieList":[{"id":22,"title":"kick-ass 2","genre":["Action"," Comedy"," Crime"],"director":["Jeff Wadlow"],"runtime":"103 min","rating":"R","format":"DVD","year":"2013","copies":1,"barcode":"null","user_rating":"null"},{"id":23,"title":"elektra","genre":["Action"," Crime"," Fantasy"],"director":["Rob Bowman"],"runtime":"97 min","rating":"PG-13","format":"DVD","year":"2005","copies":1,"barcode":"null","user_rating":"null"},{"id":38,"title":"Casino Royale","genre":["Action"," Adventure"," Thriller"],"director":["Martin Campbell"],"runtime":"144 min","rating":"PG-13","format":"DVD","year":"2006","copies":3,"barcode":"5035822350878","user_rating":"null"},{"id":39,"title":"Identity Thief","genre":["Comedy"," Crime"],"director":["Seth Gordon"],"runtime":"111 min","rating":"R","format":"DVD","year":"2013","copies":1,"barcode":"5050582935806","user_rating":"null"},{"id":41,"title":"The Adjustment Bureau","genre":["Romance"," Sci-Fi"," Thriller"],"director":["George Nolfi"],"runtime":"106 min","rating":"PG-13","format":"DVD","year":"2011","copies":1,"barcode":"505082823912","user_rating":"null"}]}
+
+            Actual - asked to enter movie ID, recommended movies is shown
+                Please enter a movie ID, a movie like that genre will be shown:
+                43
+
+                {"success":1,"movieList":[{"id":22,"title":"kick-ass 2","genre":["Action"," Comedy"," Crime"],"director":["Jeff Wadlow"],"runtime":"103 min","rating":"R","format":"DVD","year":"2013","copies":1,"barcode":"null","user_rating":"null"},{"id":23,"title":"elektra","genre":["Action"," Crime"," Fantasy"],"director":["Rob Bowman"],"runtime":"97 min","rating":"PG-13","format":"DVD","year":"2005","copies":1,"barcode":"null","user_rating":"null"},{"id":38,"title":"Casino Royale","genre":["Action"," Adventure"," Thriller"],"director":["Martin Campbell"],"runtime":"144 min","rating":"PG-13","format":"DVD","year":"2006","copies":3,"barcode":"5035822350878","user_rating":"null"},{"id":39,"title":"Identity Thief","genre":["Comedy"," Crime"],"director":["Seth Gordon"],"runtime":"111 min","rating":"R","format":"DVD","year":"2013","copies":1,"barcode":"5050582935806","user_rating":"null"},{"id":41,"title":"The Adjustment Bureau","genre":["Romance"," Sci-Fi"," Thriller"],"director":["George Nolfi"],"runtime":"106 min","rating":"PG-13","format":"DVD","year":"2011","copies":1,"barcode":"505082823912","user_rating":"null"}]}          
+                
+        Type: 10 (recommend movie by genre of watched movie by the Movie ID)
+            Expected - askd for movie ID, shown recommended movies 
+                Please enter a movie ID, a movie with that Director will be shown:
+                15
+
+                {"success":1,"movieList":[{"id":14,"title":"iron man","genre":["Marvel"," Action"," Adventure"," Sci-Fi"],"director":["Jon Favreau"],"runtime":"126 min","rating":"PG-13","format":"DVD","year":"2008","copies":3,"barcode":"null","user_rating":"null"},{"id":15,"title":"iron man 2","genre":["Disney"," marvel","Action"," Adventure"," Sci-Fi"],"director":["Jon Favreau"],"runtime":"124 min","rating":"PG-13","format":"DVD","year":"2010","copies":3,"barcode":"null","user_rating":"null"},{"id":606,"title":"Elf","genre":["Comedy"," Family"," Fantasy"],"director":["Jon Favreau"],"runtime":"97 min","rating":"PG","format":"DVD","year":"2003","copies":2,"barcode":"5017239192470","user_rating":"6.9"},{"id":694,"title":"Chef","genre":["Adventure"," Comedy"," Drama"],"director":["Jon Favreau"],"runtime":"114 min","rating":"R","format":"DVD","year":"2014","copies":1,"barcode":"5055761903331","user_rating":"7.3"},{"id":1015,"title":"Cowboys & Aliens","genre":["Action"," Sci-Fi"," Thriller"],"director":["Jon Favreau"],"runtime":"119 min","rating":"PG-13","format":"DVD","year":"2011","copies":1,"barcode":"5014437145734","user_rating":"6.0"}]}
+
+            Actual - asked to enter movie ID, recommended movies is shown
+                Please enter a movie ID, a movie with that Director will be shown:
+                15
+
+                {"success":1,"movieList":[{"id":14,"title":"iron man","genre":["Marvel"," Action"," Adventure"," Sci-Fi"],"director":["Jon Favreau"],"runtime":"126 min","rating":"PG-13","format":"DVD","year":"2008","copies":3,"barcode":"null","user_rating":"null"},{"id":15,"title":"iron man 2","genre":["Disney"," marvel","Action"," Adventure"," Sci-Fi"],"director":["Jon Favreau"],"runtime":"124 min","rating":"PG-13","format":"DVD","year":"2010","copies":3,"barcode":"null","user_rating":"null"},{"id":606,"title":"Elf","genre":["Comedy"," Family"," Fantasy"],"director":["Jon Favreau"],"runtime":"97 min","rating":"PG","format":"DVD","year":"2003","copies":2,"barcode":"5017239192470","user_rating":"6.9"},{"id":694,"title":"Chef","genre":["Adventure"," Comedy"," Drama"],"director":["Jon Favreau"],"runtime":"114 min","rating":"R","format":"DVD","year":"2014","copies":1,"barcode":"5055761903331","user_rating":"7.3"},{"id":1015,"title":"Cowboys & Aliens","genre":["Action"," Sci-Fi"," Thriller"],"director":["Jon Favreau"],"runtime":"119 min","rating":"PG-13","format":"DVD","year":"2011","copies":1,"barcode":"5014437145734","user_rating":"6.0"}]}
+            
+        Type: 11 (Update movie by entering title)
+            Expected - asked for title of movie, enter in new director and new genre, shown success message
+                Please enter the title:
+                Avengers Infinity War
+
+                Please enter the director:
+                Conor
+
+                Please enter the genre:
+                Action
+                {"success":"Success","message":"Successfully Updated Avengers Infinity War"}
+
+            Actual - asked for title of movie, enter in new director and new genre, success message
+                Please enter the title:
+                Avengers Infinity War
+
+                Please enter the director:
+                Conor
+
+                Please enter the genre:
+                Action
+                {"success":"Success","message":"Successfully Updated Avengers Infinity War"}
+
+            (Wrong input)
+            Expected - asked for title, which is wrong, of movie, enter in new director and new genre, showm failure message
+                Please enter the title:
+                Avenger Infinity War
+
+                Please enter the director:
+                Conor
+
+                Please enter the genre:
+                Action
+                {"success":"Failure","message":"Title: Avenger Infinity War was not found"}
+
+            Actual - asked for title, which is wrong, of movie, enter in new director and new genre, showm failure message
+                Please enter the title:
+                Avenger Infinity War
+
+                Please enter the director:
+                Conor
+
+                Please enter the genre:
+                Action
+                {"success":"Failure","message":"Title: Avenger Infinity War was not found"}
+        
+        Type: 12 (Delete movie by entering title)
+            Expected - asked for movie title, shown success message
+                Please enter the title:
+                Avengers Age of Ultron
+                {"success":"Success","message":"Successfully Deleted Avengers Age of Ultron"}
+
+            Actual - asked for movie title, shown success message
+                Please enter the title:
+                Avengers Age of Ultron
+                {"success":"Success","message":"Successfully Deleted Avengers Age of Ultron"}
+
+            (wrong input, movie does not exist)    
+            Expected - asked for movie title, shown success message
+                Please enter the title:
+                fesdft
+                {"success":"Failure","message":"Title: fesdft was not found"}
+            Actual - asked for movie title, shown failure message
+                Please enter the title:
+                fesdft
+                {"success":"Failure","message":"Title: fesdft was not found"}
+            
+            (wrong input, movie does not exist)    
+            Expected - asked for movie title, shown success message
+                Please enter the title:
+                Avenger
+                {"success":"Failure","message":"Title: Avenger was not found"}
+            Actual - asked for movie title, shown failure message
+                Please enter the title:
+                Avenger
+                {"success":"Failure","message":"Title: Avenger was not found"}
+            
+            (wrong input, movie does not exist)    
+            Expected - asked for movie title, shown success message
+                Please enter the title:
+                42
+                {"success":"Failure","message":"Title: 42 was not found"}
+            Actual - asked for movie title, shown failure message
+                Please enter the title:
+                42
+                {"success":"Failure","message":"Title: 42 was not found"}
+            
+        
+        
+        
+        
+        
+        
+        
+        
