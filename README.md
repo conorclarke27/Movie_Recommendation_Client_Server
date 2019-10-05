@@ -1,4 +1,9 @@
-# Object Oriented Programming Project  
+# Movie Recommender Client-Server
+Authors
+* Conor Clarke
+* Illya Chaban
+
+## Object Oriented Programming Project  
 
 ### Objectives:  
 
