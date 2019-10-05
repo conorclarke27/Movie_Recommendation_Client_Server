@@ -1,7 +1,5 @@
 # Movie Recommender Client-Server
-Authors
-* Conor Clarke
-* Illya Chaban
+*Authors: Conor Clarke, Illya Chaban*
 
 ## Object Oriented Programming Project  
 
