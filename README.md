@@ -22,7 +22,7 @@ You are required to develop an information server for storing movie information.
 
 You will need to design and implement a protocol that will allow the clients to communicate with the server. This may be done as a series of text statements. For example, if a user wants to search for movies the client could send the following string:  
   
-  **Search &nbsp;&nbsp; 1 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; My Left Foot**  
+  **Search &nbsp; &nbsp; 1 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; My Left Foot**  
   **Command &nbsp;UserID Detail**  
     
 The server should be able to process this statement and return a list of movies relating to the search term provided. It should store the queries from the user. You should ensure that the server can handle any data sent to it by the client e.g. multi-word search terms.
